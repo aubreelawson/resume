@@ -1,0 +1,146 @@
+*{
+    /*outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+}
+/* @media screen and (max-width: 600px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "q"
+        "h"
+        "e"
+        "b"
+        "f";
+}
+ */
+/* step one - build your grid */
+.container {
+    padding:7%;
+    /* height: 100%; */
+    display: grid;
+    grid-gap: 15px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(12, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: auto;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        "n n n n n n n n n n n n"
+        "p p p p p y y y y y y y"
+        "e e e e e j j j j j j j"
+        "v v v v v j j j j j j j"
+}
+/*
+li{
+    font-weight: 500;
+    padding:10px;
+}
+*/
+
+.date{
+    font-weight: 300;
+}
+body{
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    background: url(resume-background.svg);
+    background-repeat: no-repeat;
+    background-size: 2000px ;
+}
+
+ul{
+    list-style: none;
+}
+
+
+h1{
+    font-size: 50px;
+}
+
+h2{
+    padding-top: 50px;
+    font-weight: 700;
+}
+
+h3{
+    padding: 15px;
+    padding-left: 0px;
+    font-weight: 400;
+}
+
+h4{
+    font-weight: 100;
+}
+
+.about {
+    font-weight: 100;
+}
+
+.education{
+    padding-top:100px;
+}
+
+.awards{
+    padding-left: 80px;
+    padding-top:100px;
+   
+}
+
+.volunteer{
+    padding-top: 5px;
+}
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        grid-gap: 15px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "n"
+        "p"
+        "e"
+        "j"
+        "s"
+        "v"
+        "c";
+    }
+}
+
+/* step 1 - assign each of your sections a letter */
+.about {
+    grid-area: p;
+    font-weight:300;
+   /* padding-bottom:30px;*/
+}
+
+header {
+    padding-top: 150px;
+    grid-area: n;
+}
+
+.volunteer {
+    grid-area: v;
+}
+
+.education {
+    grid-area: e;
+}
+
+.awards {
+    grid-area: j;
+}
+
+/*
+footer{
+    grid-area: c;
+}
+*/
