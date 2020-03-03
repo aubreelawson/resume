@@ -1,5 +1,5 @@
 *{
-    /*outline: 2px dashed green; */
+    /* outline: 2px dashed green; */
     margin: 0;
     padding:0;
 }
@@ -33,7 +33,9 @@
         "n n n n n n n n n n n n"
         "p p p p p y y y y y y y"
         "e e e e e j j j j j j j"
-        "v v v v v j j j j j j j"
+        "v v v v v s s s s s s s"
+        "v v v v v s s s s s s s"
+        "v v v v v c c c c c c c"
 }
 /*
 li{
@@ -64,13 +66,13 @@ h1{
 
 h2{
     padding-top: 50px;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 h3{
     padding: 15px;
     padding-left: 0px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 h4{
@@ -93,6 +95,14 @@ h4{
 
 .volunteer{
     padding-top: 5px;
+}
+
+.skills{
+    padding-left: 80px;
+}
+
+.contact{
+    padding-left: 80px;
 }
 /* step three - build a grid that becomes active when the pixels are 800px or less */
 @media screen and (max-width: 800px) {
@@ -138,6 +148,16 @@ header {
 .awards {
     grid-area: j;
 }
+
+.skills{
+    grid-area: s;
+    padding-top: 5px;
+}
+
+.contact{
+    grid-area: c;
+}
+
 
 /*
 footer{
